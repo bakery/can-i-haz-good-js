@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Javascript for modern client side applications</title>
+
+		<meta name="description" content="Presentation on modern client side javascript">
+		<meta name="author" content="Philip Nuzhnyy">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Javascript</h1>
+					<h3>For modern client side applications</h3>
+					<p>
+						<small><a href="http://thebakery.io">Philip Nuzhnyy</a> // <a href="http://twitter.com/callmephilip">@callmephilip</a> // <a href="mailto:philip@thebakery.io">philip@thebakery.io</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>What's in the box</h2>
+					<ul>
+						<li>Evolution of js</li>
+						<li>Scalable js architecture</li>
+						<li>Improving dev and deployment pipeline</li>
+						<li>Performance</li>
+						<li>The future of js</li>
+					</ul>
+				
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>A (very) brief history of js</h2>
+					</section>
+
+					<section>
+						<h3>Designed for Netscape by Brendan Eich</h3>
+						<h4>shipped September 1995</h4>
+						<img src="http://upload.wikimedia.org/wikipedia/commons/0/09/BEich.jpg">
+					</section>
+
+					<section>
+						<h1>10 DAYS</h1>
+
+						<aside class="notes">
+							JavaScript, not to be confused with Java, was created in 10 days in May 1995 by Brendan Eich, then working at Netscape and now of Mozilla. (from http://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript)
+						</aside>
+					</section>
+
+					<section>
+						<h3>Microsoft introduces js into IE 3.0</h3>
+						<h4>August 1996</h4>
+					</section>
+
+					<section>
+						<h3>Standardization : ECMAScript</h3>
+						<h4>5th edition: June 2011</h4>
+					</section>
+
+					<section>
+						<h3>Ajax: A New Approach to Web Applications</h3>
+						<h4>Jesse James Garrett - February 18, 2005</h4>
+						<img src="http://uxweek.com/2011/files/2011/06/jesse_james_garrett.jpg">
+						<aside class="notes">
+							http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications
+						</aside>
+					</section>
+
+					<section>
+						<h3>jQuery 1.0</h3>
+						<h4>released in August 2006 by John Resig</h4>
+					</section>
+
+					<section>
+						<h3>HTML5 - Node.js</h3>
+					</section>
+
+					<section>
+						<h3>Scott Hanselman says</h3>
+						<h4>JavaScript is Assembly Language for the Web</h4>
+						<a target="_blank" href="https://skilltide.s3.amazonaws.com/static/scripts/a07a8913.app.compiled.js">https://skilltide.s3.amazonaws.com/static/scripts/a07a8913.app.compiled.js</a>
+						<aside class="notes">
+							http://www.hanselman.com/blog/JavaScriptIsAssemblyLanguageForTheWebSematicMarkupIsDeadCleanVsMachinecodedHTML.aspx
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Architecture</h2>
+					</section>
+					
+					<section>
+						<pre>
+							<code data-trim contenteditable>
+								alert('Hello there');
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<img src="http://api.ning.com/files/7466U3ZMMqU6UsNYWpDICLZ3qAVKSY3ZZFbfx3ra19yhF9xuhIj*rGnC72qHfY*36y510Jkn-oFxQnaAPAy-BWSR4tmF6FnY/ObamaDeletesInbox_redo.jpg">
+					</section>
+
+					<section>
+						<h3>jQuery</h3>
+						<h3>Prototype.js</h3>
+						<h3>Mootools</h3>
+					</section>
+
+					<section>
+						<h3>MV*</h3>
+						<h4>Backbone</h4>
+						<h4>Ember</h4>
+						<h4>Angular</h4>
+						<a target="_blank" href="http://todomvc.com/">TODO MVC</a>
+					</section>
+
+					<section>
+						<h3>Managing dependencies</h3>
+						<a href="https://metwit.com/">https://metwit.com/</a>
+					</section>
+
+					<section>
+						<h3>Modules</h3>
+						<h4>AMD - asynchronous module definition</h4>
+					</section>
+
+					<section>
+						<h3>Define a module (require.js)</h3>
+						<p>geo.js</p>
+						<pre>
+							<code data-trim contenteditable>
+define(function(){
+	initGeocoder: function(){
+	},
+
+	getGeocoder: function(){
+	},
+
+	/* ... */
+
+	getPositionPlacemark: function(){
+
+	}
+});
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Use a module (require.js)</h3>
+						<p>search.js</p>
+						<pre>
+							<code data-trim contenteditable>
+define(["geo"], function(geo){
+	return {
+		search : function(){
+			var geoCoder = geo.getGeocoder();
+			/* metwits dirty magic */
+		}
+	}
+});
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Entry point (require.js)</h3>
+						<p>index.html</p>
+						<pre>
+							<code data-trim contenteditable>
+								<script data-main="scripts/main" src="scripts/require.js" ></script>
+							</code>
+						</pre>
+						<p>main.js</p>
+						<pre>
+							<code data-trim contenteditable>
+require.config({
+	baseUrl: 'js/lib',
+	paths: {
+		jquery: 'jquery-1.9.0'
+	}
+});
+
+define(['jquery'], function ($) {
+	//booyakacha!
+});
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>And then</h3>
+						<h4>when you are ready to take over the</h4>
+						<h1>r.js</h1>
+						<a target="_blank" href="https://skilltide.s3.amazonaws.com/static/scripts/a07a8913.app.compiled.js">https://skilltide.s3.amazonaws.com/static/scripts/a07a8913.app.compiled.js</a>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Develop &amp; deploy</h2>
+					</section>
+					<section>
+						<h3>Avoid standard pitfalls</h3>
+						<a target="_blank" href="https://s3-eu-west-1.amazonaws.com/caldo2-static-eu/js/geo.js">https://s3-eu-west-1.amazonaws.com/caldo2-static-eu/js/geo.js</a>
+						<hr>
+						<a target="_blank" href="http://www.jshint.com/">JShint is your friend</a>
+					</section>
+					<section>
+						<h3>Don't reload manually</h3>
+						<h4>Livereload</h4>
+					</section>
+					<section>
+						<h3>Keep your jazz organized</h3>
+						<a target="_blank" href="http://bower.io">
+							<img src="http://bower.io/img/bower-logo.png">
+						</a>
+					</section>
+					<section>
+						<h3>Compile and minify</h3>
+						<h4>r.js</h4>
+						<h4>min.js</h4>
+					</section>
+					<section>
+						<h3>Fight js</h3>
+						<a target="_blank" href="http://coffeescript.org/#try:song%20%3D%20%5B%22do%22%2C%20%22re%22%2C%20%22mi%22%2C%20%22fa%22%2C%20%22so%22%5D%0A%0Asingers%20%3D%20%7BJagger%3A%20%22Rock%22%2C%20Elvis%3A%20%22Roll%22%7D%0A%0Abitlist%20%3D%20%5B%0A%20%201%2C%200%2C%201%0A%20%200%2C%200%2C%201%0A%20%201%2C%201%2C%200%0A%5D%0A%0Akids%20%3D%0A%20%20brother%3A%0A%20%20%20%20name%3A%20%22Max%22%0A%20%20%20%20age%3A%20%2011%0A%20%20sister%3A%0A%20%20%20%20name%3A%20%22Ida%22%0A%20%20%20%20age%3A%20%209%0A%0Aalert%20song.join(%22%20...%20%22)">Have a coffee</a>
+					</section>
+					<section>
+						<h3>Automate all of the above</h3>
+						<a target="_blank" href="http://gruntjs.com/"><img src="http://alphahydrae.com/images/contents/gruntjs/logo.png"></a>
+					</section>
+					<section>
+						<h3>Don't be a fool, use a tool</h3>
+						<a target="_blank" href="http://yeoman.io/">Yeoman</a>
+					</section>
+					<section>
+						<h3>Or build your own</h3>
+						<a target="_blank" href="https://github.com/thebakeryio/baker">Baker</a>
+					</section>
+				</section>
+
+				<section>
+					<h1>Thanks</h1>
+					<p>
+						<small><a href="http://thebakery.io">Philip Nuzhnyy</a> // <a href="http://twitter.com/callmephilip">@callmephilip</a> // <a href="mailto:philip@thebakery.io">philip@thebakery.io</a></small>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
