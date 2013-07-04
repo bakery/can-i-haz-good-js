@@ -44,16 +44,15 @@
 					</p>
 				</section>
 
-				<section>
-					<h2>What's in the box</h2>
-					<ul>
-						<li>Evolution of js</li>
-						<li>Scalable js architecture</li>
-						<li>Improving dev and deployment pipeline</li>
-						<li>Performance</li>
-						<li>The future of js</li>
-					</ul>
-				
+				<section data-markdown>
+					<script type="text/template">
+					## What is in the box
+					* Evolution of js
+					* Scalable js architecture
+					* Improving dev and deployment pipeline
+					* Performance
+					* The future of js
+					</script>
 					<aside class="notes">
 						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 					</aside>
@@ -61,56 +60,73 @@
 
 				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>A (very) brief history of js</h2>
+					<section data-markdown>
+						<script type="text/template">
+						## A (very) brief history of js
+						</script>
 					</section>
 
-					<section>
-						<h3>Designed for Netscape by Brendan Eich</h3>
-						<h4>shipped September 1995</h4>
-						<img src="http://upload.wikimedia.org/wikipedia/commons/0/09/BEich.jpg">
+					<section data-markdown>
+						<script type="text/template">
+						### Designed for Netscape by Brendan Eich
+						#### shipped September 1995
+						![Brendan Eich](http://upload.wikimedia.org/wikipedia/commons/0/09/BEich.jpg)
+						</script>
 					</section>
 
-					<section>
-						<h1>10 DAYS</h1>
-
+					<section data-markdown>
+						<script type="text/template">
+						# 10 DAYS
+						</script>
 						<aside class="notes">
 							JavaScript, not to be confused with Java, was created in 10 days in May 1995 by Brendan Eich, then working at Netscape and now of Mozilla. (from http://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript)
 						</aside>
 					</section>
 
-					<section>
-						<h3>Microsoft introduces js into IE 3.0</h3>
-						<h4>August 1996</h4>
+					<section data-markdown>
+						<script type="text/template">
+						### Microsoft introduces js into IE 3.0
+						#### August 1996
+						</script>
 					</section>
 
-					<section>
-						<h3>Standardization : ECMAScript</h3>
-						<h4>5th edition: June 2011</h4>
+					<section data-markdown>
+						<script type="text/template">
+						### Standardization : ECMAScript
+						#### 5th edition: June 2011
+						</script>
 					</section>
 
-					<section>
-						<h3>Ajax: A New Approach to Web Applications</h3>
-						<h4>Jesse James Garrett - February 18, 2005</h4>
-						<img src="http://uxweek.com/2011/files/2011/06/jesse_james_garrett.jpg">
+					<section data-markdown>
+						<script type="text/template">
+						### Ajax: A New Approach to Web Applications
+						#### Jesse James Garrett - February 18, 2005
+						![Jesse James Garrett](http://uxweek.com/2011/files/2011/06/jesse_james_garrett.jpg)
+						</script>
 						<aside class="notes">
 							http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications
 						</aside>
 					</section>
 
-					<section>
-						<h3>jQuery 1.0</h3>
-						<h4>released in August 2006 by John Resig</h4>
+					<section data-markdown>
+						<script type="text/template">
+						### jQuery 1.0
+						#### released in August 2006 by John Resig
+						</script>
 					</section>
 
-					<section>
-						<h3>HTML5 - Node.js</h3>
+					<section data-markdown>
+						<script type="text/template">
+						### HTML5 - Node.js
+						</script>
 					</section>
 
-					<section>
-						<h3>Scott Hanselman says</h3>
-						<h4>JavaScript is Assembly Language for the Web</h4>
-						<a target="_blank" href="https://skilltide.s3.amazonaws.com/static/scripts/a07a8913.app.compiled.js">https://skilltide.s3.amazonaws.com/static/scripts/a07a8913.app.compiled.js</a>
+					<section data-markdown>
+						<script type="text/template">
+						### Scott Hanselman says
+						#### JavaScript is Assembly Language for the Web
+						[https://skilltide.s3.amazonaws.com/static/scripts/a07a8913.app.compiled.js](https://skilltide.s3.amazonaws.com/static/scripts/a07a8913.app.compiled.js)
+						</script>
 						<aside class="notes">
 							http://www.hanselman.com/blog/JavaScriptIsAssemblyLanguageForTheWebSematicMarkupIsDeadCleanVsMachinecodedHTML.aspx
 						</aside>
@@ -118,51 +134,63 @@
 				</section>
 
 				<section>
-					<section>
-						<h2>Architecture</h2>
+					<section data-markdown>
+						<script type="text/template">
+						## Architecture
+						</script>
 					</section>
 					
-					<section>
-						<pre>
-							<code data-trim contenteditable>
-								alert('Hello there');
-							</code>
-						</pre>
+					<section data-markdown>
+						<script type="text/template">
+						```
+						alert('Hello there');
+						```
+						</script>
 					</section>
 
-					<section>
-						<img src="http://api.ning.com/files/7466U3ZMMqU6UsNYWpDICLZ3qAVKSY3ZZFbfx3ra19yhF9xuhIj*rGnC72qHfY*36y510Jkn-oFxQnaAPAy-BWSR4tmF6FnY/ObamaDeletesInbox_redo.jpg">
+					<section data-markdown>
+						<script type="text/template">
+						![gmail](http://api.ning.com/files/7466U3ZMMqU6UsNYWpDICLZ3qAVKSY3ZZFbfx3ra19yhF9xuhIj*rGnC72qHfY*36y510Jkn-oFxQnaAPAy-BWSR4tmF6FnY/ObamaDeletesInbox_redo.jpg)
+						</script>
 					</section>
 
-					<section>
-						<h3>jQuery</h3>
-						<h3>Prototype.js</h3>
-						<h3>Mootools</h3>
+					<section data-markdown>
+						<script type="text/template">
+						### jQuery
+						### Prototype.js
+						### Mootools
+						</script>
 					</section>
 
-					<section>
-						<h3>MV*</h3>
-						<h4>Backbone</h4>
-						<h4>Ember</h4>
-						<h4>Angular</h4>
-						<a target="_blank" href="http://todomvc.com/">TODO MVC</a>
+					<section data-markdown>
+						<script type="text/template">
+						### MV*
+						#### Backbone
+						#### Ember
+						#### Angular
+						[TODO MVC](http://todomvc.com/)
+						</script>
 					</section>
 
-					<section>
-						<h3>Managing dependencies</h3>
-						<a href="https://metwit.com/">https://metwit.com/</a>
+					<section data-markdown>
+						<script type="text/template">
+						### Managing dependencies
+						[https://metwit.com/](https://metwit.com/)
+						</script>
 					</section>
 
-					<section>
-						<h3>Modules</h3>
-						<h4>AMD - asynchronous module definition</h4>
+					<section data-markdown>
+						<script type="text/template">
+						### Modules
+						#### AMD - asynchronous module definition
+						</script>
 					</section>
 
-					<section>
-						<h3>Define a module (require.js)</h3>
-						<p>geo.js</p>
-						<pre>
-							<code data-trim contenteditable>
+					<section data-markdown>
+						<script type="text/template">
+						###Define a module (require.js)
+						geo.js
+						```
 define(function(){
 	initGeocoder: function(){
 	},
@@ -176,15 +204,15 @@ define(function(){
 
 	}
 });
-							</code>
-						</pre>
+							```
+						</script>
 					</section>
 
-					<section>
-						<h3>Use a module (require.js)</h3>
-						<p>search.js</p>
-						<pre>
-							<code data-trim contenteditable>
+					<section data-markdown>
+						<script type="text/template">
+						### Use a module (require.js)
+						search.js
+						```
 define(["geo"], function(geo){
 	return {
 		search : function(){
@@ -193,8 +221,8 @@ define(["geo"], function(geo){
 		}
 	}
 });
-							</code>
-						</pre>
+						```
+						</script>
 					</section>
 
 					<section>
@@ -222,63 +250,83 @@ define(['jquery'], function ($) {
 						</pre>
 					</section>
 
-					<section>
-						<h3>And then</h3>
-						<h4>when you are ready to take over the</h4>
-						<h1>r.js</h1>
-						<a target="_blank" href="https://skilltide.s3.amazonaws.com/static/scripts/a07a8913.app.compiled.js">https://skilltide.s3.amazonaws.com/static/scripts/a07a8913.app.compiled.js</a>
+					<section data-markdown>
+						<script type="text/template">
+						### And then
+						#### when you are ready to take over the
+						# r.js
+						[https://skilltide.s3.amazonaws.com/static/scripts/a07a8913.app.compiled.js](https://skilltide.s3.amazonaws.com/static/scripts/a07a8913.app.compiled.js)
+						</script>
 					</section>
 
 				</section>
 
 				<section>
-					<section>
-						<h2>Develop &amp; deploy</h2>
+					<section data-markdown>
+						<script type="text/template">
+						## Develop &amp; deploy
+						</script>
 					</section>
-					<section>
-						<h3>Avoid standard pitfalls</h3>
-						<a target="_blank" href="https://s3-eu-west-1.amazonaws.com/caldo2-static-eu/js/geo.js">https://s3-eu-west-1.amazonaws.com/caldo2-static-eu/js/geo.js</a>
-						<hr>
-						<a target="_blank" href="http://www.jshint.com/">JShint is your friend</a>
+					<section data-markdown>
+						<script type="text/template">
+						### Avoid standard pitfalls
+						[https://s3-eu-west-1.amazonaws.com/caldo2-static-eu/js/geo.js](https://s3-eu-west-1.amazonaws.com/caldo2-static-eu/js/geo.js)
+						***
+						[JShint is your friend](http://www.jshint.com/)
+						</script>
 					</section>
-					<section>
-						<h3>Don't reload manually</h3>
-						<h4>Livereload</h4>
+					<section data-markdown>
+						<script type="text/template">
+						### Do not reload manually
+						#### Livereload
+						</script>
 					</section>
-					<section>
-						<h3>Keep your jazz organized</h3>
+					<section data-markdown>
+						<script type="text/template">
+						### Keep your jazz organized
 						<a target="_blank" href="http://bower.io">
 							<img src="http://bower.io/img/bower-logo.png">
 						</a>
+						</script>
 					</section>
-					<section>
-						<h3>Compile and minify</h3>
-						<h4>r.js</h4>
-						<h4>min.js</h4>
+					<section data-markdown>
+						<script type="text/template">
+						### Compile and minify
+						#### r.js
+						#### min.js
+						</script>
 					</section>
 					<section>
 						<h3>Fight js</h3>
 						<a target="_blank" href="http://coffeescript.org/#try:song%20%3D%20%5B%22do%22%2C%20%22re%22%2C%20%22mi%22%2C%20%22fa%22%2C%20%22so%22%5D%0A%0Asingers%20%3D%20%7BJagger%3A%20%22Rock%22%2C%20Elvis%3A%20%22Roll%22%7D%0A%0Abitlist%20%3D%20%5B%0A%20%201%2C%200%2C%201%0A%20%200%2C%200%2C%201%0A%20%201%2C%201%2C%200%0A%5D%0A%0Akids%20%3D%0A%20%20brother%3A%0A%20%20%20%20name%3A%20%22Max%22%0A%20%20%20%20age%3A%20%2011%0A%20%20sister%3A%0A%20%20%20%20name%3A%20%22Ida%22%0A%20%20%20%20age%3A%20%209%0A%0Aalert%20song.join(%22%20...%20%22)">Have a coffee</a>
 					</section>
-					<section>
-						<h3>Automate all of the above</h3>
+					<section data-markdown>
+						<script type="text/template">
+						### Automate all of the above
 						<a target="_blank" href="http://gruntjs.com/"><img src="http://alphahydrae.com/images/contents/gruntjs/logo.png"></a>
+						</script>
 					</section>
-					<section>
-						<h3>Don't be a fool, use a tool</h3>
-						<a target="_blank" href="http://yeoman.io/">Yeoman</a>
+					<section data-markdown>
+						<script type="text/template">
+						### Do not be a fool, use a tool
+						[Yeoman](http://yeoman.io/)
+						</script>
 					</section>
-					<section>
-						<h3>Or build your own</h3>
-						<a target="_blank" href="https://github.com/thebakeryio/baker">Baker</a>
+					<section data-markdown>
+						<script type="text/template">
+						### Or build your own
+						[Baker](https://github.com/thebakeryio/baker)
+						</script>
 					</section>
 				</section>
 
-				<section>
-					<h1>Thanks</h1>
+				<section data-markdown>
+					<script type="text/template">
+					# Thanks
 					<p>
 						<small><a href="http://thebakery.io">Philip Nuzhnyy</a> // <a href="http://twitter.com/callmephilip">@callmephilip</a> // <a href="mailto:philip@thebakery.io">philip@thebakery.io</a></small>
 					</p>
+					</script>
 				</section>
 
 			</div>
